@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagnóstico & Proposta — Nupe Instalações Elétricas</title>
+  <meta name="description" content="Diagnóstico de marca e proposta de serviço para a Nupe Instalações Elétricas — João Luz Design" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #000000;
+      --white: #FFFFFF;
+      --gray: #F5F5F5;
+      --mid-gray: #E0E0E0;
+      --text-secondary: #666666;
+      --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--white);
+      color: var(--black);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    section { padding: 100px 0; }
+    section + section { border-top: 1px solid var(--mid-gray); }
+
+    /* ── TYPOGRAPHY ── */
+    h1 { font-size: clamp(40px, 8vw, 64px); font-weight: 600; line-height: 1.05; letter-spacing: -0.03em; }
+    h2 { font-size: clamp(26px, 4vw, 36px); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; }
+    h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 500; line-height: 1.3; letter-spacing: -0.01em; }
+    p  { font-size: 16px; line-height: 1.75; color: #333; }
+
+    .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 120px 0 100px;
+      border-bottom: 1px solid var(--mid-gray);
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+
+    .hero-eyebrow span {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .hero-eyebrow-line {
+      width: 40px;
+      height: 1px;
+      background: var(--mid-gray);
+    }
+
+    .hero h1 { margin-bottom: 32px; }
+
+    .hero-sub {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #444;
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta-item .key {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+
+    .hero-meta-item .val {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    /* ── ABOUT GRID ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about-grid .sticky-col { position: sticky; top: 40px; }
+    .about-grid p + p { margin-top: 20px; }
+
+    /* ── CONCEPT BLOCK ── */
+    .concept-block {
+      background: var(--gray);
+      padding: 56px;
+      margin-top: 48px;
+    }
+
+    .concept-block p {
+      font-size: 20px;
+      line-height: 1.65;
+      color: var(--black);
+      max-width: 600px;
+    }
+
+    .concept-block .quote-mark {
+      font-size: 64px;
+      line-height: 1;
+      color: var(--mid-gray);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 16px;
+      letter-spacing: -0.04em;
+    }
+
+    /* ── SINAIS GRID ── */
+    .sinais-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .sinal-card {
+      background: var(--gray);
+      padding: 40px 32px;
+    }
+
+    .sinal-num {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .sinal-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .sinal-card p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: #555;
+    }
+
+    /* ── DIFF GRID ── */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .diff-card {
+      background: var(--gray);
+      padding: 48px 40px;
+    }
+
+    .diff-card h3 { margin-bottom: 8px; }
+    .diff-card .sub {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    /* ── STEPS ── */
+    .method-intro { margin-bottom: 64px; }
+    .method-intro p { font-size: 18px; line-height: 1.7; max-width: 560px; }
+
+    .steps { display: flex; flex-direction: column; gap: 2px; }
+
+    .step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 40px;
+      background: var(--gray);
+      padding: 40px 40px 40px 0;
+      align-items: start;
+      transition: background 0.2s ease;
+    }
+
+    .step:hover { background: var(--black); }
+    .step:hover .step-num,
+    .step:hover h3,
+    .step:hover p { color: var(--white); }
+    .step:hover .step-detail-item { border-color: #333; }
+    .step:hover .step-detail-item .dk { color: #aaa; }
+    .step:hover .step-detail-item .dv { color: #ddd; }
+    .step:hover .step-price { color: #aaa; }
+
+    .step-num {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      padding-left: 40px;
+      padding-top: 6px;
+      transition: color 0.2s;
+    }
+
+    .step-body h3 { margin-bottom: 6px; transition: color 0.2s; }
+
+    .step-price {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      transition: color 0.2s;
+    }
+
+    .step-body p { margin-bottom: 24px; transition: color 0.2s; }
+
+    .step-details { display: flex; flex-direction: column; gap: 0; }
+
+    .step-detail-item {
+      border-top: 1px solid var(--mid-gray);
+      padding: 12px 0;
+      transition: border-color 0.2s;
+    }
+
+    .step-detail-item .dk {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+      transition: color 0.2s;
+    }
+
+    .step-detail-item .dv {
+      font-size: 14px;
+      line-height: 1.5;
+      transition: color 0.2s;
+    }
+
+    /* ── PLANS ── */
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .plan {
+      padding: 48px 36px;
+      background: var(--gray);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+
+    .plan-tag {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      background: var(--black);
+      color: var(--white);
+      padding: 5px 10px;
+      align-self: flex-start;
+    }
+
+    .plan-name {
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .plan p { font-size: 14px; line-height: 1.65; }
+
+    .plan-focus-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+
+    .plan-focus {
+      font-size: 14px;
+      line-height: 1.55;
+      color: #444;
+    }
+
+    /* ── NEXT STEPS ── */
+    .steps-list { display: flex; flex-direction: column; gap: 2px; margin-top: 48px; }
+
+    .next-step {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      padding: 28px 36px;
+      background: var(--gray);
+    }
+
+    .next-step-num {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      min-width: 24px;
+    }
+
+    .next-step-text { font-size: 16px; font-weight: 500; }
+
+    /* ── ESCALA BLOCK ── */
+    .escala-items {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-top: 32px;
+    }
+
+    .escala-item {
+      background: var(--gray);
+      padding: 28px 36px;
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    .escala-item .escala-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--black);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 9px;
+    }
+
+    .escala-item p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .escala-item strong {
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--black);
+      color: var(--white);
+      padding: 120px 0;
+      border-top: none;
+    }
+
+    .cta-section .label { color: #666; }
+    .cta-section h2 { color: var(--white); margin-bottom: 24px; max-width: 480px; }
+    .cta-section p  { color: #aaa; max-width: 440px; margin-bottom: 48px; }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 40px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .cta-btn:hover { background: #E0E0E0; }
+
+    .cta-contact {
+      margin-top: 64px;
+      padding-top: 48px;
+      border-top: 1px solid #222;
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .contact-item .key {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    .contact-item a,
+    .contact-item .val {
+      font-size: 15px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      padding: 32px 0;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    footer p {
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: #444;
+    }
+
+    /* ── FADE IN ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      section { padding: 72px 0; }
+      .hero { padding: 80px 0 72px; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .about-grid .sticky-col { position: static; }
+
+      .sinais-grid { grid-template-columns: 1fr; }
+      .diff-grid { grid-template-columns: 1fr; }
+      .diff-card { padding: 36px 28px; }
+
+      .step { grid-template-columns: 1fr; gap: 0; padding: 32px; }
+      .step-num { padding-left: 0; padding-top: 0; margin-bottom: 12px; }
+
+      .plans-grid { grid-template-columns: 1fr; }
+
+      .concept-block { padding: 36px 28px; }
+      .concept-block p { font-size: 17px; }
+
+      .cta-section { padding: 80px 0; }
+      .cta-contact { gap: 32px; }
+
+      footer .container { flex-direction: column; align-items: flex-start; }
+      .hero-meta { gap: 32px; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 20px; }
+      h1 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-eyebrow fade-in">
+        <div class="hero-eyebrow-line"></div>
+        <span>Diagnóstico & Proposta de Serviço — João Luz</span>
+      </div>
+      <h1 class="fade-in">A Nupe faz<br>a obra. O próximo<br>cliente ainda não sabe.</h1>
+      <p class="hero-sub fade-in">Este documento reúne uma análise da presença digital da Nupe Instalações Elétricas e uma proposta de serviço em plano progressivo — com identidade ativada, portfólio visível e credibilidade construída nos canais onde os clientes decidem.</p>
+      <div class="hero-meta fade-in">
+        <div class="hero-meta-item">
+          <div class="key">Cliente</div>
+          <div class="val">Nupe Instalações Elétricas</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="key">Segmento</div>
+          <div class="val">Instalações Elétricas</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="key">Modelo</div>
+          <div class="val">Fee mensal progressivo</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DIAGNÓSTICO INTRO -->
+  <section>
+    <div class="container">
+      <div class="about-grid">
+        <div class="sticky-col">
+          <span class="label fade-in">Diagnóstico de marca</span>
+        </div>
+        <div>
+          <h2 class="fade-in">Uma capacidade técnica real que a presença digital ainda não comunica.</h2>
+          <p class="fade-in" style="margin-top: 28px;">A Nupe opera, executa e entrega — e tem Instagram para provar que existe. O problema não é a capacidade. É que o canal onde os clientes mais relevantes validam fornecedores antes de contratar — Google, LinkedIn, portfólio online — ainda não tem a Nupe presente com a força que o trabalho dela merece.</p>
+          <p class="fade-in">Construtoras, arquitetos, engenheiros e administradoras de condomínio não contratam por impulso. Eles pesquisam, comparam e validam. Quando buscam "instalações elétricas prediais SP" ou "empresa elétrica para obra comercial", o que encontram não é a Nupe — é a concorrência que estruturou a presença digital antes.</p>
+          <p class="fade-in">A Nupe tem os argumentos. Falta a estrutura para apresentá-los onde a decisão acontece.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 SINAIS -->
+  <section>
+    <div class="container">
+      <span class="label fade-in">O que foi encontrado</span>
+      <h2 class="fade-in">Três sinais que explicam o gap de credibilidade.</h2>
+
+      <div class="sinais-grid fade-in">
+        <div class="sinal-card">
+          <span class="sinal-num">Sinal 01</span>
+          <h3>Invisível fora do Instagram</h3>
+          <p>O único ponto de contato digital rastreável da Nupe é o Instagram. Não há site indexado, Google Meu Negócio configurado ou LinkedIn de empresa. Para qualquer tomador de decisão que pesquisa antes de contratar, a Nupe não existe fora da rede social — o que elimina a empresa de uma etapa inteira do processo de triagem.</p>
+        </div>
+        <div class="sinal-card">
+          <span class="sinal-num">Sinal 02</span>
+          <h3>Nenhuma busca de intenção alcança a empresa</h3>
+          <p>Pesquisas como "instalações elétricas prediais SP", "empresa elétrica para reforma comercial" ou "eletricista Alphaville" não retornam a Nupe em nenhum canal. Quem ainda não conhece a empresa por indicação nunca chega até ela por busca espontânea — o que torna o crescimento dependente exclusivamente de rede pessoal.</p>
+        </div>
+        <div class="sinal-card">
+          <span class="sinal-num">Sinal 03</span>
+          <h3>O portfólio existe na obra, não na tela</h3>
+          <p>A Nupe executa projetos que poderiam servir como prova de capacidade para novos clientes — mas esse material não está sistematizado nem publicado com padrão visual consistente. Sem portfólio digital organizado, cada novo contato começa do zero, sem referência de qualidade que o próprio trabalho já poderia fornecer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTO INVISÍVEL -->
+  <section>
+    <div class="container">
+      <span class="label fade-in">Custo invisível</span>
+      <h2 class="fade-in">A pergunta que vale ser feita.</h2>
+
+      <div class="concept-block fade-in">
+        <span class="quote-mark">"</span>
+        <p>Quantas obras — condomínios, reformas comerciais, projetos de arquitetos — chegaram a cogitar a Nupe por indicação, mas fecharam com outro fornecedor simplesmente porque o concorrente tinha portfólio online, ficha no Google com avaliações e uma página com o CREA visível?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPOSTA INTRO -->
+  <section>
+    <div class="container">
+      <div class="about-grid">
+        <div class="sticky-col">
+          <span class="label fade-in">Proposta de serviço</span>
+        </div>
+        <div>
+          <h2 class="fade-in">Três meses para transformar capacidade em presença.</h2>
+          <p class="fade-in" style="margin-top: 28px;">O serviço está estruturado em três camadas que se constroem ao longo de 90 dias — começando pela base com a identidade ativada e o portfólio publicado, passando pela produção de conteúdo técnico consistente, e chegando à presença estruturada nos canais B2B onde os clientes da Nupe tomam decisão.</p>
+          <p class="fade-in">O trabalho já existe — o que falta é fazer ele aparecer nos lugares certos, com o padrão visual e a consistência que comunica o nível de execução que a Nupe já entrega. O objetivo é um só: mais visibilidade nos canais de busca, mais credibilidade nos pontos de validação e um perfil que dispensa explicação antes da primeira conversa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMADAS -->
+  <section>
+    <div class="container">
+      <span class="label fade-in">O que está incluso</span>
+      <div class="method-intro">
+        <h2 class="fade-in">Três camadas. Uma construção progressiva.</h2>
+        <p class="fade-in" style="margin-top: 24px;">Cada camada se soma à anterior — ao final do terceiro mês, todas estão ativas simultaneamente.</p>
+      </div>
+
+      <div class="steps">
+
+        <!-- CAMADA 01 -->
+        <div class="step fade-in">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3>Base e identidade digital</h3>
+            <p class="step-price">Mês 01 · Ativa do início ao fim</p>
+            <p>A Nupe precisa existir onde o próximo cliente vai procurar. Esta camada garante que a marca tenha presença consistente nos canais certos — e que o portfólio de obras já desenvolvido esteja publicado com o padrão visual que o trabalho merece.</p>
+            <div class="step-details">
+              <div class="step-detail-item">
+                <div class="dk">Brand Kit no Canva</div>
+                <div class="dv">Configuração completa da identidade visual — paleta, tipografias, logo em variações e elementos gráficos — para que a marca seja aplicada com consistência em posts, orçamentos e materiais digitais.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">Templates de feed</div>
+                <div class="dv">5 templates prontos para uso autônomo: obra concluída, antes e depois, serviços, equipe e depoimento de cliente — para que a Nupe publique sem depender de aprovação para cada peça e sem sair da identidade.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">Portfólio de obras</div>
+                <div class="dv">Atualização e publicação do portfólio de obras a partir do modelo já desenvolvido — com seleção, tratamento e organização do material existente para publicação com padrão visual consistente no Instagram e na landing page.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">Google Meu Negócio</div>
+                <div class="dv">Criação ou otimização completa da ficha — categoria correta, descrição com palavras-chave locais ("instalações elétricas prediais", "elétrica para obra comercial", "eletricista Alphaville"), fotos tratadas, área de atendimento e informações de serviço configuradas para aparecer nas buscas certas.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">Bio + destaques do Instagram</div>
+                <div class="dv">Reescrita da bio com intenção de busca e posicionamento claro + criação de destaques organizados: Serviços / Obras / Sobre / Contato — para que quem chega ao perfil entenda imediatamente o que a Nupe faz e como contratar.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAMADA 02 -->
+        <div class="step fade-in">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3>Portfólio que vende</h3>
+            <p class="step-price">Mês 02 em diante · Inicia junto à Camada 01</p>
+            <p>No segmento elétrico, o conteúdo que converte não é motivacional — é técnico e visual. Obra finalizada, detalhe de execução, prova de método. Esta camada produz esse material de forma consistente, sem depender de disponibilidade da equipe para cada publicação.</p>
+            <div class="step-details">
+              <div class="step-detail-item">
+                <div class="dk">Cronograma editorial mensal</div>
+                <div class="dv">Planejamento de todo o conteúdo com antecedência — temas, formatos, datas e objetivos de cada publicação, para que a Nupe saiba o que vem por aí e prepare o material de obra com antecedência.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">4 posts de portfólio por mês</div>
+                <div class="dv">Fotos de obras tratadas com copy técnico — mostrando padrão de execução, tipo de projeto e escala de trabalho. A Nupe registra a obra conforme briefing de enquadramento; eu edito, escrevo e publico.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">2 carrosséis educativos por mês</div>
+                <div class="dv">Conteúdo de autoridade técnica que posiciona a Nupe como referência no segmento — não apenas prestadora de serviço. Exemplos: "como identificar uma instalação com risco", "o que avaliar antes de contratar uma empresa elétrica", "por que a entrada de energia precisa de laudo técnico".</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">Stories — direção para a equipe</div>
+                <div class="dv">Briefing semanal com sugestão do que publicar nos stories — obra em andamento, bastidores de execução, curiosidade técnica. A publicação fica com a equipe da Nupe, que conhece a rotina da obra melhor do que ninguém.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">1 post semanal no Google Meu Negócio</div>
+                <div class="dv">Publicações na ficha do Google toda semana — ação que a maioria dos concorrentes locais não executa e que impacta diretamente o ranqueamento nas buscas por tipo de serviço e localização.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">Agendamento + Insights</div>
+                <div class="dv">Todo o conteúdo do feed agendado com antecedência + relatório mensal com os principais indicadores do perfil — alcance, impressões, salvamentos e crescimento de seguidores.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAMADA 03 -->
+        <div class="step fade-in">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3>Presença B2B estruturada</h3>
+            <p class="step-price">Mês 03 em diante · Os canais onde os clientes da Nupe decidem</p>
+            <p>Com a base construída e o conteúdo rodando, o foco passa para os canais onde construtoras, arquitetos e administradoras validam fornecedores — e para estruturar a captação ativa de equipe no LinkedIn, onde a Nupe já tem demanda recorrente.</p>
+            <div class="step-details">
+              <div class="step-detail-item">
+                <div class="dk">LinkedIn da empresa</div>
+                <div class="dv">Criação e otimização completa do perfil — logo, banner, descrição com palavras-chave do segmento, especialidades e primeiras publicações de portfólio. O canal onde arquitetos e engenheiros pesquisam e validam fornecedores antes de recomendar.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">Publicação de vagas no LinkedIn</div>
+                <div class="dv">Criação e publicação de anúncios de vaga conforme a necessidade da obra — ajudantes, eletricistas, técnicos. Cada vaga redigida com clareza de escopo, requisitos e condições, publicada no perfil da empresa e otimizada para alcançar candidatos ativos na plataforma.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">Landing page de portfólio</div>
+                <div class="dv">Uma página dedicada que centraliza o que a Nupe entrega: serviços, obras realizadas, registro técnico, área de atendimento e botão de WhatsApp — otimizada com palavras-chave locais para indexar nas buscas de intenção e funcionar como cartão de visita digital enviado em propostas e orçamentos.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">Captação de avaliações no Google</div>
+                <div class="dv">Rotina estruturada de solicitação após entrega de obra — meta de 15 avaliações reais nos primeiros 90 dias. Avaliações que aumentam autoridade local e aparecem nas buscas por serviço na região.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">Resposta estratégica às avaliações</div>
+                <div class="dv">Cada nova avaliação respondida com linguagem estratégica — incluindo palavras-chave de serviço e localização de forma natural, reforçando o posicionamento técnico no algoritmo do Google.</div>
+              </div>
+              <div class="step-detail-item">
+                <div class="dk">Relatório trimestral</div>
+                <div class="dv">Comparativo de performance antes e depois da implementação: visualizações na ficha do Google, buscas pelo nome, cliques para WhatsApp, alcance no Instagram e desempenho das vagas publicadas no LinkedIn.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTIMENTO -->
+  <section>
+    <div class="container">
+      <span class="label fade-in">Investimento</span>
+      <h2 class="fade-in">Plano progressivo. Sem surpresas.</h2>
+      <p class="fade-in" style="margin-top: 16px; max-width: 480px;">Cada mês adiciona uma camada — o investimento cresce junto com o escopo entregue. Ao final dos três meses: R$ 2.300,00 investidos, três camadas ativas, presença digital estruturada nos canais que importam.</p>
+
+      <div class="plans-grid fade-in">
+
+        <div class="plan">
+          <div class="plan-tag">Mês 01</div>
+          <div class="plan-name">R$ 600</div>
+          <div class="plan-focus-label">Foco</div>
+          <div class="plan-focus">Base da identidade digital — Brand Kit, portfólio de obras publicado, GMN configurado, Instagram otimizado e templates no ar.</div>
+        </div>
+
+        <div class="plan">
+          <div class="plan-tag">Mês 02</div>
+          <div class="plan-name">R$ 800</div>
+          <div class="plan-focus-label">Foco</div>
+          <div class="plan-focus">Conteúdo técnico em produção — posts de portfólio, carrosséis de autoridade, direção de stories, posts no GMN e primeiros insights.</div>
+        </div>
+
+        <div class="plan">
+          <div class="plan-tag">Mês 03</div>
+          <div class="plan-name">R$ 900</div>
+          <div class="plan-focus-label">Foco</div>
+          <div class="plan-focus">Presença B2B ativa — LinkedIn configurado, vagas publicadas, landing page no ar, avaliações no Google e relatório comparativo de crescimento.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMO PATAMAR -->
+  <section>
+    <div class="container">
+      <span class="label fade-in">Próximo patamar</span>
+      <h2 class="fade-in">Com a base estabelecida, a escala se abre.</h2>
+      <p class="fade-in" style="margin-top: 20px; max-width: 520px;">Ao final dos 3 meses — com portfólio publicado, presença no Google e LinkedIn ativo — o serviço evolui para um novo nível de atuação e a Nupe passa a competir ativamente pelos clientes que hoje nem chegam a pesquisar o nome da empresa.</p>
+
+      <div class="escala-items fade-in" style="margin-top: 40px;">
+        <div class="escala-item">
+          <div class="escala-dot"></div>
+          <p><strong>Proposta comercial visual</strong> — um PDF ou página web de proposta que a Nupe envia para construtoras, incorporadoras e arquitetos, com portfólio de obras, credenciais técnicas, registros de CREA e diferenciais de execução. O documento que transforma o "vou pensar" em fechamento.</p>
+        </div>
+        <div class="escala-item">
+          <div class="escala-dot"></div>
+          <p><strong>Outreach ativo para B2B</strong> — fluxo de prospecção estruturada via LinkedIn para arquitetos, engenheiros e administradoras com material de apresentação da empresa, portfolio selecionado por tipo de obra e roteiro de abordagem inicial.</p>
+        </div>
+        <div class="escala-item">
+          <div class="escala-dot"></div>
+          <p><strong>Reavaliação do modelo de serviço</strong> — com dados reais de crescimento em mãos, definimos juntos o próximo escopo com clareza sobre o que a Nupe precisa para o próximo ciclo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMOS PASSOS -->
+  <section>
+    <div class="container">
+      <span class="label fade-in">Próximos passos</span>
+      <h2 class="fade-in">Aprovando essa proposta, começamos assim.</h2>
+
+      <div class="steps-list fade-in">
+        <div class="next-step">
+          <div class="next-step-num">01</div>
+          <div class="next-step-text">Aprovação desta proposta</div>
+        </div>
+        <div class="next-step">
+          <div class="next-step-num">02</div>
+          <div class="next-step-text">Assinatura do contrato digital</div>
+        </div>
+        <div class="next-step">
+          <div class="next-step-num">03</div>
+          <div class="next-step-text">Briefing de imersão — serviços, área de atuação, tipos de obra e materiais de portfólio disponíveis</div>
+        </div>
+        <div class="next-step">
+          <div class="next-step-num">04</div>
+          <div class="next-step-text">Início das entregas da Camada 01</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <span class="label">Encerramento</span>
+      <h2>Vamos colocar a Nupe no lugar onde ela merece estar.</h2>
+      <p>Ficou alguma dúvida sobre o escopo, as camadas ou as formas de pagamento? Estou disponível para conversarmos e adaptar o que for necessário.</p>
+      <a href="https://wa.me/5511947986188" target="_blank" class="cta-btn">Vamos começar →</a>
+
+      <div class="cta-contact">
+        <div class="contact-item">
+          <div class="key">Telefone</div>
+          <a href="tel:+5511947986188" class="val">11 94798-6188</a>
+        </div>
+        <div class="contact-item">
+          <div class="key">E-mail</div>
+          <a href="mailto:joaoluzdesign@gmail.com" class="val">joaoluzdesign@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <div class="key">Instagram</div>
+          <a href="https://instagram.com/joaoluzdesign" target="_blank" class="val">@joaoluzdesign</a>
+        </div>
+        <div class="contact-item">
+          <div class="key">WhatsApp</div>
+          <a href="https://wa.me/5511947986188" target="_blank" class="val">Fale pelo WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© João Luz Design</p>
+      <p>Diagnóstico & Proposta — Nupe Instalações Elétricas</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach((el, i) => {
+      el.style.transitionDelay = `${(i % 4) * 80}ms`;
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
